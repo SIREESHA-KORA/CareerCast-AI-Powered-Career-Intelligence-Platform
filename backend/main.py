@@ -3,13 +3,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from backend.app.core.config import settings
-from backend.app.api.resume import router as resume_router
-from backend.app.api.prediction import router as prediction_router
-from backend.app.api.skills import router as skills_router
-from backend.app.api.learning import router as learning_router
-from backend.app.api.dashboard import router as dashboard_router
-from backend.app.api.admin import router as admin_router
+from app.core.config import settings
+from app.api.resume import router as resume_router
+from app.api.prediction import router as prediction_router
+from app.api.skills import router as skills_router
+from app.api.learning import router as learning_router
+from app.api.dashboard import router as dashboard_router
+from app.api.admin import router as admin_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -59,4 +59,4 @@ def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

@@ -4,7 +4,7 @@ import json
 import numpy as np
 import pandas as pd
 from typing import List, Dict, Any
-from backend.app.core.config import settings
+from app.core.config import settings
 
 class MLModelManager:
     _instance = None

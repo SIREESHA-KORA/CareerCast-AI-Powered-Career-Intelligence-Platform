@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from backend.app.schemas.models import LearningResponse
-from backend.app.services.learning_service import get_learning_resources
+from app.schemas.models import LearningResponse
+from app.services.learning_service import get_learning_resources
 
 router = APIRouter(prefix="/learning-resources", tags=["Learning Recommendations"])
 

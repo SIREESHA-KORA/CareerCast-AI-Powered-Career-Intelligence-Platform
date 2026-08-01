@@ -4,7 +4,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
-from backend.app.core.config import settings
+from app.core.config import settings
 
 def generate_pdf_report(candidate_name: str, primary_career: dict, top_recommendations: list, skill_analysis: dict, output_filename: str = "CareerCast_Report.pdf") -> str:
     os.makedirs(settings.REPORTS_DIR, exist_ok=True)

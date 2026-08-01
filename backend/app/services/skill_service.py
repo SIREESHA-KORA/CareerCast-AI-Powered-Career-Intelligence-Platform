@@ -1,5 +1,5 @@
 from typing import List, Dict, Set
-from backend.app.ml.model_manager import model_manager
+from app.ml.model_manager import model_manager
 
 def normalize_skill(skill: str) -> str:
     return skill.strip().lower()

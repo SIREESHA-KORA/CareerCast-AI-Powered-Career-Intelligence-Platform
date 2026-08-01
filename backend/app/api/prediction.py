@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from backend.app.schemas.models import PredictRequest, PredictionResponse
-from backend.app.ml.model_manager import model_manager
+from app.schemas.models import PredictRequest, PredictionResponse
+from app.ml.model_manager import model_manager
 
 router = APIRouter(prefix="/predict", tags=["Career Prediction"])
 

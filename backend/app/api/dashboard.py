@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List, Dict, Any
-from backend.app.ml.model_manager import model_manager
-from backend.app.services.report_service import generate_pdf_report
+from app.ml.model_manager import model_manager
+from app.services.report_service import generate_pdf_report
 
 router = APIRouter(prefix="/dashboard", tags=["Dashboard Data & Reports"])
 

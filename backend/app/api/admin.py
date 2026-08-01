@@ -2,8 +2,8 @@ import os
 import json
 import pandas as pd
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from backend.app.ml.model_manager import model_manager
-from backend.app.core.config import settings
+from app.ml.model_manager import model_manager
+from app.core.config import settings
 
 router = APIRouter(prefix="/admin", tags=["Admin Operations"])
 

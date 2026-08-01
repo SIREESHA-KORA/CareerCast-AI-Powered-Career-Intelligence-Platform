@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from backend.app.schemas.models import SkillGapRequest, SkillGapResponse
-from backend.app.services.skill_service import analyze_skill_gap
+from app.schemas.models import SkillGapRequest, SkillGapResponse
+from app.services.skill_service import analyze_skill_gap
 
 router = APIRouter(prefix="/skill-gap", tags=["Skill Gap Analysis"])
 

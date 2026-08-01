@@ -1,9 +1,9 @@
 import os
 import shutil
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from backend.app.services.parser_service import parse_resume_file
-from backend.app.schemas.models import ResumeParsedData
-from backend.app.core.config import settings
+from app.services.parser_service import parse_resume_file
+from app.schemas.models import ResumeParsedData
+from app.core.config import settings
 
 router = APIRouter(prefix="/resume", tags=["Resume Parsing"])
 

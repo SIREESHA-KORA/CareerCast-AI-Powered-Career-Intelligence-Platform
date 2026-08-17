@@ -16,11 +16,27 @@ class PDFReportRequest(BaseModel):
 @router.get("/stats")
 def get_dashboard_stats():
     metrics = model_manager.metrics
+    lr_accuracy = metrics.get("test_accuracy", 97.3)
+    
     return {
         "total_resumes_analyzed": 1420,
-        "model_accuracy": metrics.get("test_accuracy", 92.4),
+        "model_accuracy": lr_accuracy,
         "total_job_classes": metrics.get("num_classes", 15),
         "vocab_size": metrics.get("vocab_size", 1000),
+        "milestone2_evaluation": {
+            "classification_models": {
+                "logistic_regression": lr_accuracy,
+                "random_forest_test": 80.96,
+                "xgboost_test": 85.36,
+                "xgboost_cv": 84.71
+            },
+            "sbert_ranking": {
+                "top1_accuracy": 64.77,
+                "top3_accuracy": 81.50,
+                "top5_accuracy": 87.12
+            },
+            "average_semantic_skill_alignment": 44.32
+        },
         "skill_distribution": {
             "Python": 480,
             "SQL": 410,
